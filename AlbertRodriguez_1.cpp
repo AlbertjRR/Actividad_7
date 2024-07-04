@@ -1,14 +1,12 @@
-                 //Ejercicio 1
-
-
+//Ejercicio num 1
 
 #include <iostream>
 #include <fstream>
 #include <cctype> 
 
 int main() {
-    std::ifstream entrada("David Sanchez 1.txt"); 
-    std::ofstream salida("David Sanchez 2.txt"); 
+    std::ifstream entrada("paradigma 1.txt"); 
+    std::ofstream salida("paradigma 2.txt"); 
 
     if (entrada.is_open() && salida.is_open()) {
         char caracter;
@@ -18,9 +16,9 @@ int main() {
             salida << caracter; 
         }
 
-        std::cout << "Listo David el archivo fue convertido a mayusculas correctamente." << std::endl;
+        std::cout << "el archivo fue convertido en mayusculas." << std::endl;
     } else {
-        std::cerr << "Lo siento David hubo un Error al abrir los archivos." << std::endl;
+        std::cerr << "presento un Error al abrir los archivos." << std::endl;
     }
 
     entrada.close();
