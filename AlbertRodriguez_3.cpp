@@ -1,30 +1,28 @@
-        //Ejercicio 3
-        
-        
-        
+//Ejercicio num 3
+              
 #include <iostream>
 #include <fstream>
 #include <string>
 
 int main() {
-    int cantidadFrutas;
+    int totalFrutas;
 
-    std::cout << "Por favor David ingrese la cantidad de frutas a almacenar: ";
-    std::cin >> cantidadFrutas;
+    std::cout << "ingresar el total de frutas para almacenar: ";
+    std::cin >> totaldFrutas;
     std::cin.ignore(); 
 
-    std::ofstream archivo("Frutas alamcenadas.txt");
+    std::ofstream archivo("total de Frutas alamcenadas.txt");
 
     if (archivo.is_open()) {
         std::string fruta;
 
-        for (int i = 0; i < cantidadFrutas; i++) {
-            std::cout << "David por favor Ingrese el nombre de la fruta " << i + 1 << ": ";
+        for (int i = 0; i < totalFrutas; i++) {
+            std::cout << "Ingresar el nombre de la fruta " << i + 1 << ": ";
             std::getline(std::cin, fruta);
             archivo << fruta << std::endl;
         }
 
-        std::cout << "David los nombres de las frutas fueron correctamente almacenadas en el archivo frutas almacenadas.txt." << std::endl;
+        std::cout << "los nombres fueron almacenadas en el archivo frutas almacenadas.txt." << std::endl;
     } else {
         std::cerr << "Error al crear el archivo." << std::endl;
     }
